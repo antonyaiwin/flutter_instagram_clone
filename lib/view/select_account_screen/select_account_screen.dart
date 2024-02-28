@@ -25,7 +25,7 @@ class SelectAccountScreen extends StatelessWidget {
             'jacob_w',
             style: TextStyle(
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.accountTextColor,
+                color: ColorConstants.black26,
                 fontSize: 14),
           ),
           const SizedBox(height: 12),
