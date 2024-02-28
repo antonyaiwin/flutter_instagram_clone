@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/core/constants/color_constants.dart';
 import 'package:flutter_instagram_clone/core/constants/image_constants.dart';
 import 'package:flutter_instagram_clone/global_widgets/custom_button.dart';
+import 'package:flutter_instagram_clone/view/login_screen/login_screen.dart';
 
 class SelectAccountScreen extends StatelessWidget {
   const SelectAccountScreen({super.key});
@@ -17,14 +18,14 @@ class SelectAccountScreen extends StatelessWidget {
           const SizedBox(height: 52),
           const CircleAvatar(
             backgroundImage: AssetImage(ImageConstants.accountAvatarPng),
-            radius: 50,
+            radius: 42.5,
           ),
           const SizedBox(height: 13),
           const Text(
             'jacob_w',
             style: TextStyle(
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.acountTextColor,
+                color: ColorConstants.accountTextColor,
                 fontSize: 14),
           ),
           const SizedBox(height: 12),
@@ -33,7 +34,13 @@ class SelectAccountScreen extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ));
+              },
               style: const ButtonStyle(
                 visualDensity: VisualDensity(vertical: -4),
               ),
