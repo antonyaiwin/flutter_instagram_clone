@@ -7,26 +7,30 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     this.color = ColorConstants.primaryBlue,
+    this.onTap,
   });
   final String text;
   final Color color;
-
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 34),
-      padding: const EdgeInsets.symmetric(vertical: 14),
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: Center(
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: ColorConstants.primaryWhite,
-            fontWeight: FontWeight.w600,
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        margin: const EdgeInsets.symmetric(horizontal: 34),
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: ColorConstants.primaryWhite,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
       ),
