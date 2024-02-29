@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_clone/dummy_db.dart';
 
 import '../../../../core/constants/color_constants.dart';
-import '../../../../core/constants/image_constants.dart';
 import 'post_footer_actions.dart';
 
 class PostFooter extends StatelessWidget {
@@ -22,7 +22,7 @@ class PostFooter extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 14,
-                backgroundImage: AssetImage(ImageConstants.accountAvatarPng),
+                backgroundImage: NetworkImage(DummyDb.currentUserProfilePic),
               ),
               const SizedBox(width: 6.5),
               RichText(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/image_constants.dart';
+import '../../../../dummy_db.dart';
 
 class PostHeader extends StatelessWidget {
   const PostHeader({
@@ -14,7 +14,7 @@ class PostHeader extends StatelessWidget {
         SizedBox(width: 10),
         CircleAvatar(
           radius: 20,
-          backgroundImage: AssetImage(ImageConstants.accountAvatarPng),
+          backgroundImage: NetworkImage(DummyDb.currentUserProfilePic),
         ),
         SizedBox(width: 10),
         Column(

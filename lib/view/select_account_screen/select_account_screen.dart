@@ -4,6 +4,9 @@ import 'package:flutter_instagram_clone/core/constants/color_constants.dart';
 import 'package:flutter_instagram_clone/core/constants/image_constants.dart';
 import 'package:flutter_instagram_clone/global_widgets/custom_button.dart';
 import 'package:flutter_instagram_clone/view/login_screen/login_screen.dart';
+import 'package:flutter_instagram_clone/view/main_screen/main_screen.dart';
+
+import '../../dummy_db.dart';
 
 class SelectAccountScreen extends StatelessWidget {
   const SelectAccountScreen({super.key});
@@ -11,46 +14,55 @@ class SelectAccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(ImageConstants.instaLogoPng),
-          const SizedBox(height: 52),
-          const CircleAvatar(
-            backgroundImage: AssetImage(ImageConstants.accountAvatarPng),
-            radius: 42.5,
-          ),
-          const SizedBox(height: 13),
-          const Text(
-            'jacob_w',
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                color: ColorConstants.black26,
-                fontSize: 14),
-          ),
-          const SizedBox(height: 12),
-          const CustomButton(
-            text: 'Log in',
-          ),
-          const SizedBox(height: 30),
-          TextButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LoginScreen(),
-                    ));
-              },
-              style: const ButtonStyle(
-                visualDensity: VisualDensity(vertical: -4),
-              ),
-              child: const Text(
-                'Switch Accounts',
-                style: TextStyle(
-                  color: ColorConstants.primaryBlue,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 34),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(ImageConstants.instaLogoPng),
+            const SizedBox(height: 52),
+            const CircleAvatar(
+              backgroundImage: NetworkImage(DummyDb.currentUserProfilePic),
+              radius: 42.5,
+            ),
+            const SizedBox(height: 13),
+            const Text(
+              'jacob_w',
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: ColorConstants.black26,
+                  fontSize: 14),
+            ),
+            const SizedBox(height: 12),
+            CustomButton(
+              text: 'Log in',
+              onTap: () => Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainScreen(),
+                  ),
+                  (route) => false),
+            ),
+            const SizedBox(height: 30),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ));
+                },
+                style: const ButtonStyle(
+                  visualDensity: VisualDensity(vertical: -4),
                 ),
-              )),
-        ],
+                child: const Text(
+                  'Switch Accounts',
+                  style: TextStyle(
+                    color: ColorConstants.primaryBlue,
+                  ),
+                )),
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         width: double.infinity,

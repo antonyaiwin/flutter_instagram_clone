@@ -13,25 +13,27 @@ class FeedListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        itemBuilder: (context, index) {
-          return Column(
-            children: [
-              const PostHeader(),
-              const SizedBox(height: 11),
-              Image.asset(
-                'assets/images/dummy_image.png',
-                scale: 0.5,
-              ),
-              // const SizedBox(height: 13.5),
-              const PostFooter()
-            ],
-          );
-        },
-        separatorBuilder: (context, index) {
-          return const SizedBox(height: 10);
-        },
-        itemCount: 10);
+      padding: EdgeInsets.zero,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+        return Column(
+          children: [
+            const PostHeader(),
+            const SizedBox(height: 11),
+            Image.asset(
+              'assets/images/dummy_image.png',
+              scale: 0.5,
+            ),
+            // const SizedBox(height: 13.5),
+            const PostFooter()
+          ],
+        );
+      },
+      separatorBuilder: (context, index) {
+        return const SizedBox(height: 10);
+      },
+      itemCount: 10,
+    );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_clone/core/constants/image_constants.dart';
 
 import '../../../core/constants/color_constants.dart';
 import '../../../core/constants/icon_constants.dart';
+import '../../../dummy_db.dart';
 
 class MainBottomNavBar extends StatelessWidget {
   const MainBottomNavBar({
@@ -47,14 +47,15 @@ class MainBottomNavBar extends StatelessWidget {
               padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
                   border: Border.all(
-                      color: currentIndex != 4
-                          ? Colors.transparent
-                          : ColorConstants.black26,
-                      width: 1),
+                    color: currentIndex != 4
+                        ? Colors.transparent
+                        : ColorConstants.black26,
+                    width: 1,
+                  ),
                   borderRadius: BorderRadius.circular(20)),
               child: const CircleAvatar(
                 radius: 13,
-                backgroundImage: AssetImage(ImageConstants.accountAvatarPng),
+                backgroundImage: NetworkImage(DummyDb.currentUserProfilePic),
               ),
             ),
             label: '',
