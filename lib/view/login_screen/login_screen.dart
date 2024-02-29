@@ -31,7 +31,10 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(ImageConstants.instaLogoPng),
+                Image.asset(
+                  ImageConstants.instaLogoPng,
+                  width: 182,
+                ),
                 const SizedBox(height: 39),
                 LoginTextField(
                   controller: nameController,
