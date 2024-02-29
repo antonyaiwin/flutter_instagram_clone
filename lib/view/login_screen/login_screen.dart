@@ -63,12 +63,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 30),
                 CustomButton(
                   text: 'Log in',
-                  onTap: () => Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MainScreen(),
-                      ),
-                      (route) => false),
+                  onTap: nameController.text.isNotEmpty &&
+                          passController.text.isNotEmpty
+                      ? () => Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MainScreen(),
+                          ),
+                          (route) => false)
+                      : null,
                   color: nameController.text.isNotEmpty &&
                           passController.text.isNotEmpty
                       ? ColorConstants.primaryBlue
