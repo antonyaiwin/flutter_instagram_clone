@@ -8,4 +8,9 @@ class ColorConstants {
 
   // textField colors
   static const Color textFieldFill = Color(0xffFAFAFA);
+
+  // Story border gradient colors
+  static const Color storyBorderGradientColor1 = Color(0xffFBAA47);
+  static const Color storyBorderGradientColor2 = Color(0xffD91A46);
+  static const Color storyBorderGradientColor3 = Color(0xffA60F93);
 }
