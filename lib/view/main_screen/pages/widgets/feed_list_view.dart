@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_instagram_clone/dummy_db.dart';
 
-import 'post_footer.dart';
-import 'post_header.dart';
+import 'posts_card.dart';
 
 class FeedListView extends StatelessWidget {
   const FeedListView({
@@ -13,27 +13,27 @@ class FeedListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.zero,
+      padding: const EdgeInsets.symmetric(vertical: 10),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-        return Column(
-          children: [
-            const PostHeader(),
-            const SizedBox(height: 11),
-            Image.asset(
-              'assets/images/dummy_image.png',
-              scale: 0.5,
-            ),
-            // const SizedBox(height: 13.5),
-            const PostFooter()
-          ],
+        return PostsCard(
+          userName: DummyDb.postsList[index]['user_name'],
+          place: DummyDb.postsList[index]['place'],
+          profilePicUrl: DummyDb.postsList[index]['profile_pic'],
+          postImageUrl: DummyDb.postsList[index]['post_image'],
+          likedUser: DummyDb.postsList[index]['liked_user'],
+          likedUserPicUrl: DummyDb.postsList[index]['liked_user_pic'],
+          commentedUser: DummyDb.postsList[index]['commented_user'],
+          hilightComment: DummyDb.postsList[index]['hilight_comment'],
+          likeCount: DummyDb.postsList[index]['like_count'],
+          commentCount: DummyDb.postsList[index]['comment_count'],
         );
       },
       separatorBuilder: (context, index) {
         return const SizedBox(height: 10);
       },
-      itemCount: 10,
+      itemCount: DummyDb.postsList.length,
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_clone/dummy_db.dart';
 
 import '../../../../core/constants/color_constants.dart';
 import 'post_footer_actions.dart';
@@ -7,8 +6,20 @@ import 'post_footer_actions.dart';
 class PostFooter extends StatelessWidget {
   const PostFooter({
     super.key,
+    required this.likedUser,
+    required this.likedUserPicUrl,
+    required this.commentedUser,
+    required this.hilightComment,
+    required this.likeCount,
+    required this.commentCount,
   });
 
+  final String likedUser;
+  final String likedUserPicUrl;
+  final String commentedUser;
+  final String hilightComment;
+  final int likeCount;
+  final int commentCount;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,26 +31,26 @@ class PostFooter extends StatelessWidget {
           const SizedBox(height: 15),
           Row(
             children: [
-              const CircleAvatar(
+              CircleAvatar(
                 radius: 14,
-                backgroundImage: NetworkImage(DummyDb.currentUserProfilePic),
+                backgroundImage: NetworkImage(likedUserPicUrl),
               ),
               const SizedBox(width: 6.5),
               RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   text: 'Liked by ',
-                  style: TextStyle(color: ColorConstants.black26),
+                  style: const TextStyle(color: ColorConstants.black26),
                   children: [
                     TextSpan(
-                      text: 'craig_love',
-                      style: TextStyle(
+                      text: likedUser,
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    TextSpan(text: ' and '),
+                    const TextSpan(text: ' and '),
                     TextSpan(
-                        text: '44,686 others',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                        text: '$likeCount others',
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -47,19 +58,26 @@ class PostFooter extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           RichText(
-            text: const TextSpan(
-              style: TextStyle(color: ColorConstants.black26),
+            text: TextSpan(
+              style: const TextStyle(color: ColorConstants.black26),
               children: [
                 TextSpan(
-                  text: 'joshua_l',
-                  style: TextStyle(
+                  text: '$commentedUser ',
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 TextSpan(
-                    text:
-                        ' The game in Japan was amazing and I want to share some photos'),
+                  text: hilightComment,
+                ),
               ],
+            ),
+          ),
+          const SizedBox(height: 5),
+          Text(
+            'View all $commentCount comments',
+            style: TextStyle(
+              color: ColorConstants.black26.withOpacity(0.75),
             ),
           ),
         ],

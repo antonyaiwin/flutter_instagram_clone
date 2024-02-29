@@ -39,7 +39,9 @@ class HomePage extends StatelessWidget {
                 const SizedBox(width: 15.96),
               ],
             ),
-            const Divider(),
+            const Divider(
+              height: 1,
+            ),
             SizedBox(
               height: 107,
               child: ListView.separated(
@@ -59,7 +61,9 @@ class HomePage extends StatelessWidget {
                 itemCount: DummyDb.storyList.length,
               ),
             ),
-            const Divider(),
+            const Divider(
+              height: 1,
+            ),
             const FeedListView()
           ],
         ),
