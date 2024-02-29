@@ -1,6 +1,10 @@
 # flutter_instagram_clone
 
-A new Flutter project.
+An Instagram Clone Flutter project.
+
+## Live Preview
+
+- [View Live](https://antonyaiwin.github.io/flutter_instagram_clone/build/web/)
 
 ## Getting Started
 
