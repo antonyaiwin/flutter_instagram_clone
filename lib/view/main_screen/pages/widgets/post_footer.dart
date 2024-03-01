@@ -6,10 +6,10 @@ import 'post_footer_actions.dart';
 class PostFooter extends StatelessWidget {
   const PostFooter({
     super.key,
+    required this.userName,
     required this.likedUser,
     required this.likedUserPicUrl,
-    required this.commentedUser,
-    required this.hilightComment,
+    required this.caption,
     required this.likeCount,
     required this.commentCount,
     required this.date,
@@ -17,10 +17,10 @@ class PostFooter extends StatelessWidget {
     required this.currentPageIndex,
   });
 
+  final String userName;
   final String likedUser;
   final String likedUserPicUrl;
-  final String commentedUser;
-  final String hilightComment;
+  final String caption;
   final int likeCount;
   final int commentCount;
   final String date;
@@ -71,13 +71,13 @@ class PostFooter extends StatelessWidget {
               style: const TextStyle(color: ColorConstants.black26),
               children: [
                 TextSpan(
-                  text: '$commentedUser ',
+                  text: '$userName ',
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 TextSpan(
-                  text: hilightComment,
+                  text: caption,
                 ),
               ],
             ),

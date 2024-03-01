@@ -119,8 +119,7 @@ class DummyDb {
             (index) => postImages[Random().nextInt(postImages.length)]),
         'liked_user': DummyData.generateRandomUsername(),
         'liked_user_pic': personImages[Random().nextInt(personImages.length)],
-        'commented_user': DummyData.generateRandomUsername(),
-        'hilight_comment': DummyData.realtimeComments[
+        'caption': DummyData.realtimeComments[
             Random().nextInt(DummyData.realtimeComments.length)],
         'like_count': Random().nextInt(999) + 5,
         'comment_count': Random().nextInt(999) + 5,

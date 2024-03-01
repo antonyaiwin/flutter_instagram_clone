@@ -15,8 +15,7 @@ class PostsCard extends StatefulWidget {
     required this.postImagesUrlList,
     required this.likedUser,
     required this.likedUserPicUrl,
-    required this.commentedUser,
-    required this.hilightComment,
+    required this.caption,
     required this.likeCount,
     required this.commentCount,
     required this.date,
@@ -28,8 +27,7 @@ class PostsCard extends StatefulWidget {
   final List postImagesUrlList;
   final String likedUser;
   final String likedUserPicUrl;
-  final String commentedUser;
-  final String hilightComment;
+  final String caption;
   final int likeCount;
   final int commentCount;
   final String date;
@@ -60,10 +58,10 @@ class _PostsCardState extends State<PostsCard> {
           },
         ),
         PostFooter(
+          userName: widget.userName,
           likedUser: widget.likedUser,
           likedUserPicUrl: widget.likedUserPicUrl,
-          commentedUser: widget.commentedUser,
-          hilightComment: widget.hilightComment,
+          caption: widget.caption,
           likeCount: widget.likeCount,
           commentCount: widget.commentCount,
           date: widget.date,
