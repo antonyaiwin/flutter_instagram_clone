@@ -22,7 +22,7 @@ class FeedListView extends StatelessWidget {
           place: DummyDb.postsList[index]['place'],
           profilePicUrl: DummyDb.postsList[index]['profile_pic'],
           isVerified: DummyDb.postsList[index]['is_verified'],
-          postImageUrl: DummyDb.postsList[index]['post_image'],
+          postImagesUrlList: DummyDb.postsList[index]['post_images'],
           likedUser: DummyDb.postsList[index]['liked_user'],
           likedUserPicUrl: DummyDb.postsList[index]['liked_user_pic'],
           commentedUser: DummyDb.postsList[index]['commented_user'],
