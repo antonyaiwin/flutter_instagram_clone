@@ -115,7 +115,7 @@ class DummyDb {
         'place': DummyData.generateRandomPlace(),
         'profile_pic': user['profile_pic'],
         'is_verified': Random().nextBool(),
-        'post_images': List.generate(Random().nextInt(5) + 7,
+        'post_images': List.generate(Random().nextInt(10) + 1,
             (index) => postImages[Random().nextInt(postImages.length)]),
         'liked_user': DummyData.generateRandomUsername(),
         'liked_user_pic': personImages[Random().nextInt(personImages.length)],
