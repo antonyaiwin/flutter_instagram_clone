@@ -114,14 +114,17 @@ class DummyDb {
         'user_name': user['user_name'],
         'place': DummyData.generateRandomPlace(),
         'profile_pic': user['profile_pic'],
-        'post_image': postImages[Random().nextInt(postImages.length)],
+        'is_verified': Random().nextBool(),
+        'post_images': List.generate(Random().nextInt(5) + 7,
+            (index) => postImages[Random().nextInt(postImages.length)]),
         'liked_user': DummyData.generateRandomUsername(),
         'liked_user_pic': personImages[Random().nextInt(personImages.length)],
         'commented_user': DummyData.generateRandomUsername(),
         'hilight_comment': DummyData.realtimeComments[
             Random().nextInt(DummyData.realtimeComments.length)],
-        'like_count': Random().nextInt(9999999) + 5,
-        'comment_count': Random().nextInt(9999999) + 5,
+        'like_count': Random().nextInt(999) + 5,
+        'comment_count': Random().nextInt(999) + 5,
+        'date': DummyData.generateRandomDate(),
       };
     });
   }

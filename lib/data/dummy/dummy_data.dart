@@ -11,7 +11,7 @@ class DummyData {
     'Grace',
     'Henry',
     'Ivy',
-    'Jack'
+    'Jack',
   ];
   static List<String> lastNames = [
     'Smith',
@@ -23,8 +23,47 @@ class DummyData {
     'Miller',
     'Wilson',
     'Moore',
-    'Taylor'
+    'Taylor',
   ];
+
+  static const List monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  static String generateRandomDate() {
+    int monthNumber = Random().nextInt(monthNames.length);
+    int day = 1;
+    switch (monthNumber + 1) {
+      case 2:
+        day = Random().nextInt(28) + 1;
+        break;
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        day = Random().nextInt(31) + 1;
+        break;
+      default:
+        day = Random().nextInt(30) + 1;
+        break;
+    }
+
+    return '${monthNames[monthNumber]} $day';
+  }
 
   static List<String> separators = ['.', '_'];
 

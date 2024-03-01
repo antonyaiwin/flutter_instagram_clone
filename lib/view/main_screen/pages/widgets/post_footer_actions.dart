@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/widgets/custom_page_indicator.dart';
 
 import '../../../../core/constants/icon_constants.dart';
 
 class PostFooterActions extends StatelessWidget {
   const PostFooterActions({
     super.key,
+    required this.pageCount,
+    required this.currentPageIndex,
   });
+
+  final int pageCount;
+  final int currentPageIndex;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Expanded(
+        const Expanded(
           flex: 3,
           child: Row(
             children: [
@@ -30,8 +36,15 @@ class PostFooterActions extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(child: Icon(Icons.more_horiz)),
-        Expanded(
+        if (pageCount > 1)
+          Expanded(
+            flex: 2,
+            child: CustomPageIndicator(
+              count: pageCount,
+              pageIndex: currentPageIndex,
+            ),
+          ),
+        const Expanded(
           flex: 3,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,

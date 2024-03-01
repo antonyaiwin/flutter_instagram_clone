@@ -12,6 +12,9 @@ class PostFooter extends StatelessWidget {
     required this.hilightComment,
     required this.likeCount,
     required this.commentCount,
+    required this.date,
+    required this.pageCount,
+    required this.currentPageIndex,
   });
 
   final String likedUser;
@@ -20,6 +23,9 @@ class PostFooter extends StatelessWidget {
   final String hilightComment;
   final int likeCount;
   final int commentCount;
+  final String date;
+  final int pageCount;
+  final int currentPageIndex;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,7 +33,10 @@ class PostFooter extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const PostFooterActions(),
+          PostFooterActions(
+            currentPageIndex: currentPageIndex,
+            pageCount: pageCount,
+          ),
           const SizedBox(height: 15),
           Row(
             children: [
@@ -78,6 +87,13 @@ class PostFooter extends StatelessWidget {
             'View all $commentCount comments',
             style: TextStyle(
               color: ColorConstants.black26.withOpacity(0.75),
+            ),
+          ),
+          Text(
+            date,
+            style: TextStyle(
+              color: ColorConstants.black26.withOpacity(0.75),
+              fontSize: 11,
             ),
           ),
         ],
