@@ -67,6 +67,8 @@ class _PostsCardState extends State<PostsCard> {
           likeCount: widget.likeCount,
           commentCount: widget.commentCount,
           date: widget.date,
+          pageCount: widget.postImagesUrlList.length,
+          currentPageIndex: currentPageIndex,
         ),
       ],
     );
