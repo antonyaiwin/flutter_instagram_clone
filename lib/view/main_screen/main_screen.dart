@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
       color: Colors.blue,
     ),
     Container(
-      color: Colors.blue,
+      color: Colors.amber,
     ),
   ];
   @override
