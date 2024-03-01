@@ -21,6 +21,7 @@ class FeedListView extends StatelessWidget {
           userName: DummyDb.postsList[index]['user_name'],
           place: DummyDb.postsList[index]['place'],
           profilePicUrl: DummyDb.postsList[index]['profile_pic'],
+          isVerified: DummyDb.postsList[index]['is_verified'],
           postImageUrl: DummyDb.postsList[index]['post_image'],
           likedUser: DummyDb.postsList[index]['liked_user'],
           likedUserPicUrl: DummyDb.postsList[index]['liked_user_pic'],
@@ -28,6 +29,7 @@ class FeedListView extends StatelessWidget {
           hilightComment: DummyDb.postsList[index]['hilight_comment'],
           likeCount: DummyDb.postsList[index]['like_count'],
           commentCount: DummyDb.postsList[index]['comment_count'],
+          date: DummyDb.postsList[index]['date'],
         );
       },
       separatorBuilder: (context, index) {

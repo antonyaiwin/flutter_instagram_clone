@@ -12,32 +12,33 @@ class PostsCard extends StatelessWidget {
     required this.place,
     required this.profilePicUrl,
     required this.postImageUrl,
+    required this.isVerified,
     required this.likedUser,
     required this.likedUserPicUrl,
     required this.commentedUser,
     required this.hilightComment,
     required this.likeCount,
     required this.commentCount,
+    required this.date,
   });
   final String userName;
   final String? place;
   final String profilePicUrl;
   final String postImageUrl;
+  final bool isVerified;
   final String likedUser;
   final String likedUserPicUrl;
   final String commentedUser;
   final String hilightComment;
   final int likeCount;
   final int commentCount;
-
+  final String date;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         PostHeader(
-          userName: userName,
-          place: place,
-          profilePicUrl: profilePicUrl,
+          isVerified: isVerified,
         ),
         const SizedBox(height: 11),
         Stack(
@@ -65,12 +66,7 @@ class PostsCard extends StatelessWidget {
           ],
         ),
         PostFooter(
-          likedUser: likedUser,
-          likedUserPicUrl: likedUserPicUrl,
-          commentedUser: commentedUser,
-          hilightComment: hilightComment,
-          likeCount: likeCount,
-          commentCount: commentCount,
+          date: date,
         ),
       ],
     );

@@ -12,6 +12,7 @@ class PostFooter extends StatelessWidget {
     required this.hilightComment,
     required this.likeCount,
     required this.commentCount,
+    required this.date,
   });
 
   final String likedUser;
@@ -20,6 +21,7 @@ class PostFooter extends StatelessWidget {
   final String hilightComment;
   final int likeCount;
   final int commentCount;
+  final String date;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -78,6 +80,13 @@ class PostFooter extends StatelessWidget {
             'View all $commentCount comments',
             style: TextStyle(
               color: ColorConstants.black26.withOpacity(0.75),
+            ),
+          ),
+          Text(
+            date,
+            style: TextStyle(
+              color: ColorConstants.black26.withOpacity(0.75),
+              fontSize: 11,
             ),
           ),
         ],
