@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/color_constants.dart';
+import '../../../../../core/constants/color_constants.dart';
 import 'post_footer_actions.dart';
 
 class PostFooter extends StatelessWidget {

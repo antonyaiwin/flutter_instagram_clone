@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_instagram_clone/view/main_screen/pages/widgets/image_carousel.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/home_page/widgets/image_carousel.dart';
 
 import 'post_footer.dart';
 import 'post_header.dart';

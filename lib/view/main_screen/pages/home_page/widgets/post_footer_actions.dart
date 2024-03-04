@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_clone/view/main_screen/pages/widgets/custom_page_indicator.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/home_page/widgets/custom_page_indicator.dart';
 
-import '../../../../core/constants/icon_constants.dart';
+import '../../../../../core/constants/icon_constants.dart';
 
 class PostFooterActions extends StatelessWidget {
   const PostFooterActions({
