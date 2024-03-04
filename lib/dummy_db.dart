@@ -103,13 +103,14 @@ class DummyDb {
     },
   ];
 
+// function to generate random posts
   static List<Map<String, dynamic>> get postsList {
     List users = [];
     users.addAll(storyList);
     users.removeAt(0);
     users.shuffle();
     return List.generate(50, (index) {
-      Map user = storyList[Random().nextInt(storyList.length)];
+      Map user = users[Random().nextInt(users.length)];
       return {
         'user_name': user['user_name'],
         'place': DummyData.generateRandomPlace(),
@@ -125,6 +126,18 @@ class DummyDb {
         'comment_count': Random().nextInt(999) + 5,
         'date': DummyData.generateRandomDate(),
       };
+    });
+  }
+
+  // function to generate random image list
+  static List<String> get imagesList {
+    List users = [];
+    users.addAll(storyList);
+    users.removeAt(0);
+    users.shuffle();
+    return List.generate(50, (index) {
+      return DummyDb
+          .personImages[Random().nextInt(DummyDb.personImages.length)];
     });
   }
 }
