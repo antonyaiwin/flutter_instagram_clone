@@ -1,16 +1,19 @@
-# flutter_instagram_clone
+# Flutter Instagram Clone
 
-A new Flutter project.
+Clone of Instagram using Flutter framework.
 
-## Getting Started
+## 📱 Screenshots
 
-This project is a starting point for a Flutter application.
+<img src="screenshots/screenshot_1.jpg" height="500em"/> <img src="screenshots/screenshot_2.jpg" height="500em"/> <img src="screenshots/screenshot_3.jpg" height="500em"/> <img src="screenshots/screenshot_4.jpg" height="500em"/>
 
-A few resources to get you started if this is your first Flutter project:
+## 🌐 Live web preview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[Click here to view live preview of the project ](https://antonyaiwin.github.io/flutter_instagram_clone/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 Resources
+
+##### Design and icons are from figma project :
+
+https://www.figma.com/file/zrxf9kOSFDX6cwdErLvFYh/Instagram-UI-Screens-(Community)?type=design&t=QfQIYR5QZw9kukH3-6
+
+##### Images are from [Pexels.com](https://www.pexels.com/)
