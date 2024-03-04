@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_clone/view/main_screen/pages/home_page.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/home_page/home_page.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/search_page/search_page.dart';
 import 'package:flutter_instagram_clone/view/new_post_screen/new_post_screen.dart';
 
 import 'widgets/main_bottom_nav_bar.dart';
@@ -16,9 +17,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List pages = [
     const HomePage(),
-    Container(
-      color: Colors.red,
-    ),
+    const SearchPage(),
     Container(
       color: Colors.white,
     ),
