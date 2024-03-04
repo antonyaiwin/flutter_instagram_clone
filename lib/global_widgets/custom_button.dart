@@ -5,12 +5,29 @@ import '../core/constants/color_constants.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    required this.text,
+    required this.child,
     this.color = ColorConstants.primaryBlue,
     this.onTap,
-  });
-  final String text;
+    this.expanded = true,
+    this.padding,
+  }) : outlined = false;
+
+  // Outlined button constructor
+  const CustomButton.outlined({
+    super.key,
+    required this.child,
+    this.onTap,
+    this.expanded = true,
+    this.padding,
+  })  : color = Colors.transparent,
+        outlined = true;
+
+  final Widget child;
   final Color color;
+  final bool expanded;
+  final bool outlined;
+  final EdgeInsetsGeometry? padding;
+
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -18,19 +35,35 @@ class CustomButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(5),
       onTap: onTap,
       child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        width: expanded ? double.infinity : null,
+        padding:
+            padding ?? const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
         decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(5),
-        ),
+            color: color,
+            borderRadius: BorderRadius.circular(5),
+            border: outlined
+                ? Border.all(
+                    color: ColorConstants.black3c.withOpacity(
+                      0.18,
+                    ),
+                  )
+                : null),
         child: Center(
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: ColorConstants.primaryWhite,
-              fontWeight: FontWeight.w600,
+          child: IconTheme(
+            data: IconThemeData(
+              color: outlined
+                  ? ColorConstants.black26
+                  : ColorConstants.primaryWhite,
+              size: 16,
             ),
+            child: DefaultTextStyle(
+                style: TextStyle(
+                  color: outlined
+                      ? ColorConstants.black26
+                      : ColorConstants.primaryWhite,
+                  fontWeight: FontWeight.w600,
+                ),
+                child: child),
           ),
         ),
       ),
