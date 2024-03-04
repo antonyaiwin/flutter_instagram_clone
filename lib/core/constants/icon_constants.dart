@@ -1,6 +1,7 @@
 class MyIcons {
   static const String _iconsLightDir = 'assets/icons_light';
   static const String _iconsDarkDir = 'assets/icons_dark';
+
 // icons constants
 // Home
   static const String homeIconFilledPng = '$_iconsLightDir/home_filled.png';
@@ -19,25 +20,30 @@ class MyIcons {
   static const String newPostIconFilledPng =
       '$_iconsLightDir/new_post_outlined.png';
 
-  // Camera
+// Camera
   static const String cameraIconFilledPng = '$_iconsLightDir/camera_filled.png';
   static const String cameraIconOutlinedPng =
       '$_iconsLightDir/camera_outlined.png';
 
-  // Camera
-  // static const String commentIconFilledPng = '$_iconsLightDir/comment_filled.png';
+// Camera
   static const String commentIconOutlinedPng =
       '$_iconsLightDir/comment_outlined.png';
 
-  // Camera
-  // static const String saveIconFilledPng = '$_iconsLightDir/save_filled.png';
+// Save
   static const String saveIconOutlinedPng = '$_iconsLightDir/save_outlined.png';
 
-  // IGNY
+// IGTV
   static const String igtvIconFilledPng = '$_iconsLightDir/igtv_filled.png';
   static const String igtvIconOutlinedPng =
       '$_iconsDarkDir/igtv_outlined_dark.png';
 
+// shop
+  static const String shopIconFilledPng = '$_iconsLightDir/shop_filled.png';
+
+// messenger
   static const String messengerOutlinedPng =
       '$_iconsLightDir/messenger_outlined.png';
+
+// Live Icon
+  static const String liveOutlinedPng = '$_iconsLightDir/live_outlined.png';
 }
