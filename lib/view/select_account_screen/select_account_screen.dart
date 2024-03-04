@@ -38,13 +38,13 @@ class SelectAccountScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             CustomButton(
-              text: 'Log in',
               onTap: () => Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const MainScreen(),
                   ),
                   (route) => false),
+              child: const Text('Log in'),
             ),
             const SizedBox(height: 30),
             TextButton(

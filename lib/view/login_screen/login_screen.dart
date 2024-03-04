@@ -65,7 +65,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 30),
                 CustomButton(
-                  text: 'Log in',
                   onTap: nameController.text.isNotEmpty &&
                           passController.text.isNotEmpty
                       ? () => Navigator.pushAndRemoveUntil(
@@ -79,6 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           passController.text.isNotEmpty
                       ? ColorConstants.primaryBlue
                       : ColorConstants.primaryBlue.withOpacity(0.4),
+                  child: const Text('Log in'),
                 ),
                 const SizedBox(height: 37),
                 TextButton.icon(
