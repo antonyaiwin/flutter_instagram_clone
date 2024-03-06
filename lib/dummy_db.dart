@@ -3,6 +3,10 @@ import 'dart:math';
 import 'data/dummy/dummy_data.dart';
 
 class DummyDb {
+  static const String currentUserName = 'antony_aiwin';
+  static const String currentUserFullName = 'Antony Aiwin';
+  static const String currentUserCaption =
+      'Mobile Application Developer\nEverything is a program in the matrix.';
   // dummy profile Picture URL
   static const String currentUserProfilePic =
       'https://images.pexels.com/photos/1812634/pexels-photo-1812634.jpeg?auto=compress&cs=tinysrgb&w=600';
