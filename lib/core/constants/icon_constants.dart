@@ -46,4 +46,13 @@ class MyIcons {
 
 // Live Icon
   static const String liveOutlinedPng = '$_iconsLightDir/live_outlined.png';
+
+// Lock Icon
+  static const String lockFilledPng = '$_iconsLightDir/lock_filled.png';
+
+// Grid Icon
+  static const String gridOutlinedPng = '$_iconsLightDir/grid_outlined.png';
+
+// Tags Icon
+  static const String tagsOutlinedPng = '$_iconsLightDir/tags_outlined.png';
 }
