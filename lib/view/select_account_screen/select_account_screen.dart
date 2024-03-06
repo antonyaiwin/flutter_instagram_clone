@@ -30,7 +30,7 @@ class SelectAccountScreen extends StatelessWidget {
             ),
             const SizedBox(height: 13),
             const Text(
-              'jacob_w',
+              DummyDb.currentUserName,
               style: TextStyle(
                   fontWeight: FontWeight.w600,
                   color: ColorConstants.black26,

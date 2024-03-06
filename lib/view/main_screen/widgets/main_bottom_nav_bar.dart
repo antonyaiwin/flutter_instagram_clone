@@ -46,13 +46,14 @@ class MainBottomNavBar extends StatelessWidget {
             icon: Container(
               padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
-                  border: Border.all(
-                    color: currentIndex != 4
-                        ? Colors.transparent
-                        : ColorConstants.black26,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(20)),
+                border: Border.all(
+                  color: currentIndex != 4
+                      ? Colors.transparent
+                      : ColorConstants.black26,
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
               child: const CircleAvatar(
                 radius: 13,
                 backgroundImage: NetworkImage(DummyDb.currentUserProfilePic),
