@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/view/main_screen/pages/home_page/home_page.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/profile_page/profile_page.dart';
+import 'package:flutter_instagram_clone/view/main_screen/pages/profile_page/profile_page_sliver.dart';
 import 'package:flutter_instagram_clone/view/main_screen/pages/search_page/search_page.dart';
 import 'package:flutter_instagram_clone/view/new_post_screen/new_post_screen.dart';
 
@@ -24,9 +26,7 @@ class _MainScreenState extends State<MainScreen> {
     Container(
       color: Colors.blue,
     ),
-    Container(
-      color: Colors.amber,
-    ),
+    ProfilePageSliver(),
   ];
   @override
   Widget build(BuildContext context) {
