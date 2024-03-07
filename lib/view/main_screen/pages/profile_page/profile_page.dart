@@ -78,34 +78,32 @@ class ProfilePage extends StatelessWidget {
                       const SizedBox(height: 15),
                       const CustomButton.outlined(child: Text('Edit Profile')),
                       const SizedBox(height: 16),
-                      Row(
-                        children: [
-                          const HilightsWidget(
-                            title: 'New',
-                            child: Icon(
-                              Icons.add,
-                              size: 35,
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-                          HilightsWidget(
-                            backgroundImage:
-                                NetworkImage(DummyDb.personImages[8]),
-                            title: 'Friends',
-                          ),
-                          const SizedBox(width: 10),
-                          HilightsWidget(
-                            backgroundImage:
-                                NetworkImage(DummyDb.personImages[5]),
-                            title: 'Sports',
-                          ),
-                          const SizedBox(width: 10),
-                          HilightsWidget(
-                            backgroundImage:
-                                NetworkImage(DummyDb.personImages[1]),
-                            title: 'Design',
-                          ),
-                        ],
+                      SizedBox(
+                        height: 96,
+                        child: ListView.separated(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            if (index == 0) {
+                              return HilightsWidget(
+                                title: 'New',
+                                child: Icon(
+                                  Icons.add,
+                                  size: 35,
+                                ),
+                              );
+                            }
+                            return HilightsWidget(
+                              title: DummyDb.hilightsMapList[index - 1]
+                                  ['title'],
+                              backgroundImage: NetworkImage(DummyDb
+                                  .hilightsMapList[index - 1]['image_url']),
+                            );
+                          },
+                          separatorBuilder: (context, index) {
+                            return const SizedBox(width: 10);
+                          },
+                          itemCount: DummyDb.hilightsMapList.length + 1,
+                        ),
                       ),
                     ],
                   ),
