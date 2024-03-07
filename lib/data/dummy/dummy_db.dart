@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'data/dummy/dummy_data.dart';
+import 'dummy_data.dart';
 
 class DummyDb {
   static const String currentUserName = 'antony_aiwin';
@@ -46,6 +46,85 @@ class DummyDb {
     'https://images.pexels.com/photos/20330740/pexels-photo-20330740/free-photo-of-a-dog-with-light-brown-fur-sitting-on-a-meadow.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
     'https://images.pexels.com/photos/19399844/pexels-photo-19399844/free-photo-of-young-woman-in-white-blouse-and-black-waistcoat.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
     'https://images.pexels.com/photos/12672768/pexels-photo-12672768.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+  ];
+
+  // hilights map list
+  static const List hilightsMapList = [
+    {
+      'image_url':
+          'https://images.pexels.com/photos/20147180/pexels-photo-20147180/free-photo-of-a-close-up-of-a-blue-glacier.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      'title': 'Sport'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/19172555/pexels-photo-19172555/free-photo-of-woman-with-black-hair-sitting-in-city.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      'title': 'Music'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/20116345/pexels-photo-20116345/free-photo-of-postal-altiplano-chileno.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      'title': 'Festival'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/12428121/pexels-photo-12428121.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Friends'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/4005498/pexels-photo-4005498.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Event'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/20420447/pexels-photo-20420447/free-photo-of-a-person-wearing-a-blue-hoodie-with-a-flower-in-their-pocket.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Travel'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/11958479/pexels-photo-11958479.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Nature'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/18509324/pexels-photo-18509324/free-photo-of-blooming-white-buttecup-flower.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Fashion'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/18119535/pexels-photo-18119535/free-photo-of-aerial-view-of-a-winding-road-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Adventure'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/19859148/pexels-photo-19859148/free-photo-of-wild-roes-in-forest.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Wildlife'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/8630759/pexels-photo-8630759.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Food'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/20113974/pexels-photo-20113974/free-photo-of-a-person-holding-a-cup-of-coffee-on-a-white-blanket.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Coffee'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/20330740/pexels-photo-20330740/free-photo-of-a-dog-with-light-brown-fur-sitting-on-a-meadow.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Pets'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/19399844/pexels-photo-19399844/free-photo-of-young-woman-in-white-blouse-and-black-waistcoat.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Fashion'
+    },
+    {
+      'image_url':
+          'https://images.pexels.com/photos/12672768/pexels-photo-12672768.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
+      'title': 'Fitness'
+    },
   ];
 
   // Dummy Story List

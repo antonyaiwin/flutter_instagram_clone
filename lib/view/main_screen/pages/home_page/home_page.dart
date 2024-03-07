@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/core/constants/icon_constants.dart';
 import 'package:flutter_instagram_clone/core/constants/image_constants.dart';
-import 'package:flutter_instagram_clone/dummy_db.dart';
+import 'package:flutter_instagram_clone/data/dummy/dummy_db.dart';
 import 'widgets/custom_story_avatar.dart';
 import 'widgets/feed_list_view.dart';
 

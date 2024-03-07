@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_instagram_clone/dummy_db.dart';
+import 'package:flutter_instagram_clone/data/dummy/dummy_db.dart';
 
 import 'posts_card.dart';
 

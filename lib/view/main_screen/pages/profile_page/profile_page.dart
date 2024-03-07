@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/color_constants.dart';
 import '../../../../core/constants/icon_constants.dart';
-import '../../../../dummy_db.dart';
+import '../../../../data/dummy/dummy_db.dart';
 import '../../../../global_widgets/custom_button.dart';
 import 'widgets/hilights_widget.dart';
 import 'widgets/outlined_circle_avatar.dart';

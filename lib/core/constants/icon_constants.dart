@@ -55,4 +55,17 @@ class MyIcons {
 
 // Tags Icon
   static const String tagsOutlinedPng = '$_iconsLightDir/tags_outlined.png';
+
+// Tags Icon
+  static const String boomerangOutlinedPng =
+      '$_iconsLightDir/boomerang_outlined.png';
+
+// Tags Icon
+  static const String collageOutlinedPng =
+      '$_iconsLightDir/collage_outlined.png';
+
+// Tags Icon
+  static const String galleryOutlinedPng =
+      '$_iconsLightDir/gallery_outlined.png';
+  static const String galleryFilledPng = '$_iconsLightDir/gallery_filled.png';
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constants/color_constants.dart';
 import '../../../core/constants/icon_constants.dart';
-import '../../../dummy_db.dart';
+import '../../../data/dummy/dummy_db.dart';
 
 class MainBottomNavBar extends StatelessWidget {
   const MainBottomNavBar({

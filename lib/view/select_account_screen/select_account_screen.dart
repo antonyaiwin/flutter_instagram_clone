@@ -6,7 +6,7 @@ import 'package:flutter_instagram_clone/global_widgets/custom_button.dart';
 import 'package:flutter_instagram_clone/view/login_screen/login_screen.dart';
 import 'package:flutter_instagram_clone/view/main_screen/main_screen.dart';
 
-import '../../dummy_db.dart';
+import '../../data/dummy/dummy_db.dart';
 
 class SelectAccountScreen extends StatelessWidget {
   const SelectAccountScreen({super.key});
