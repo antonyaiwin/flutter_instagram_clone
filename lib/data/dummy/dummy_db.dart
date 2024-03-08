@@ -11,6 +11,151 @@ class DummyDb {
   static const String currentUserProfilePic =
       'https://images.pexels.com/photos/1812634/pexels-photo-1812634.jpeg?auto=compress&cs=tinysrgb&w=600';
 
+// Dummy notification list
+  static List notificationsMapList = [
+    {
+      'title': 'New',
+      'notification_list': [
+        {
+          'type': 'liked',
+          'users': [
+            storyList[1],
+          ],
+          'time': '1h',
+          'posts_urls': [
+            postImages[0],
+          ],
+          'already_followed': false,
+        },
+      ],
+    },
+    {
+      'title': 'Today',
+      'notification_list': [
+        {
+          'type': 'liked',
+          'users': [
+            storyList[2],
+            storyList[3],
+            storyList[1],
+            storyList[1],
+            storyList[1],
+            storyList[1],
+            storyList[1],
+            storyList[1],
+            storyList[1],
+            storyList[1],
+            storyList[1]
+          ],
+          'time': '3h',
+          'posts_urls': [
+            postImages[0],
+          ],
+          'already_followed': false,
+        },
+      ],
+    },
+    {
+      'title': 'This Week',
+      'notification_list': [
+        {
+          'type': 'mentioned',
+          'comment': '@jacob_w exactly...💫',
+          'users': [
+            storyList[4],
+          ],
+          'time': '2d',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': false,
+        },
+        {
+          'type': 'followed',
+          'users': [
+            storyList[5],
+          ],
+          'time': '3d',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': true,
+        },
+        {
+          'type': 'followed',
+          'users': [
+            storyList[6],
+          ],
+          'time': '3d',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': true,
+        },
+        {
+          'type': 'followed',
+          'users': [
+            storyList[7],
+          ],
+          'time': '3d',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': false,
+        },
+      ],
+    },
+    {
+      'title': 'This Month',
+      'notification_list': [
+        {
+          'type': 'followed',
+          'users': [
+            storyList[8],
+          ],
+          'time': '7d',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': true,
+        },
+        {
+          'type': 'followed',
+          'users': [
+            storyList[9],
+          ],
+          'time': '1w',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': true,
+        },
+        {
+          'type': 'followed',
+          'users': [
+            storyList[10],
+          ],
+          'time': '2w',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': false,
+        },
+        {
+          'type': 'followed',
+          'users': [
+            storyList[11],
+          ],
+          'time': '3w',
+          'posts_urls': [
+            postImages[1],
+          ],
+          'already_followed': false,
+        },
+      ],
+    },
+  ];
+
 // Dummy avatar image URL List
   static const List personImages = [
     'https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -182,6 +327,26 @@ class DummyDb {
     {
       'profile_pic': personImages[9],
       'user_name': 'Emma Martinez',
+      'is_live': false,
+    },
+    {
+      'profile_pic': personImages[10],
+      'user_name': 'Mathew Block',
+      'is_live': false,
+    },
+    {
+      'profile_pic': personImages[11],
+      'user_name': 'Ken Miller',
+      'is_live': false,
+    },
+    {
+      'profile_pic': personImages[12],
+      'user_name': 'Sandra Jones',
+      'is_live': false,
+    },
+    {
+      'profile_pic': personImages[13],
+      'user_name': 'Robert Downey',
       'is_live': false,
     },
   ];
